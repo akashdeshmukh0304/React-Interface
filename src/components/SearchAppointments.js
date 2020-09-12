@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class SearchAppointments extends Component {
 
-    render() {
+    render = () => {
         return (
             <div className="search-appointments row justify-content-center my-4">
                 <div className="col-md-6">

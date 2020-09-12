@@ -2,20 +2,23 @@ import React, { Component } from "react";
 import { FaPlus } from "react-icons/fa";
 
 export default class AddAppoitments extends Component {
-    constructor() {
-        super();
-        this.state = {
-            petName: "",
-            ownerName: "",
-            aptDate: "",
-            aptTime: "",
-            aptNotes: "",
-        };
-        this.handleChange = this.handleChange.bind(this);
-        this.handleAdd = this.handleAdd.bind(this);
-    }
 
-    handleChange(e) {
+    /**
+     * Magaging the state
+     */
+    state = {
+        petName: "",
+        ownerName: "",
+        aptDate: "",
+        aptTime: "",
+        aptNotes: ""
+    }
+ 
+    /**
+     * Handle change event
+     * @param {Object} e event received by the element
+     */
+    handleChange = e => {
         const target = e.target;
         const value = target.value;
         const name = target.name;
@@ -25,7 +28,11 @@ export default class AddAppoitments extends Component {
         });
     }
 
-    handleAdd(e) {
+    /**
+     * Handle add events
+     * @param {Object} e Events received by the element
+     */
+    handleAdd = e => {
         e.preventDefault();
         let tempApt = {
             petName: this.state.petName,
@@ -45,7 +52,10 @@ export default class AddAppoitments extends Component {
         this.props.toggleForm();
     }
 
-    render() {
+    /**
+     * Render the component
+     */
+    render = () => {
         return (
             <div
                 className={

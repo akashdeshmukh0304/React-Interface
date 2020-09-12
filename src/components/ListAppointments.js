@@ -3,7 +3,7 @@ import { FaTimes } from "react-icons/fa";
 import Moment from "react-moment";
 
 export default class AddAppoitments extends Component {
-    render() {
+    render = () => {
         const { appointments, deleteAppointment } = this.props;
 
         return (
